@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guru's fitness factory</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="logo/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="logo/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="logo/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<script type="text/javascript">
+    function BMI() {
+        var h=document.getElementById('h').value;
+        var w=document.getElementById('w').value;
+        var bmi=w/(h/100*h/100);
+        var bmio=(bmi.toFixed(2));
+
+        document.getElementById("result").innerHTML="Your BMI is " + bmio;
+    }
+</script>
+<body>
+    <header>
+        <h1>Guru's fitnees factory</h1>
+    </header>
+    
+    <nav>
+        <a class="menu-button" href="#">Home</a>
+        <a class="menu-button" href="#myvideos">My videos </a>
+        <a class="menu-button" href="#bmi">Calculateyour BMI</a>
+        <a class="menu-button" href="#founder">Our Founder </a>
+        <a href="#" class="menu-button flex-item">Login/SignUp </a>
+    </nav>
+    <main>
+        <section id="myvideos">
+            <h2><span>My videos</span></h2>
+            <h1>Leg-press (120 and 250kgs) and Pec-fly</h1>
+
+<!-- Flickity HTML init -->
+            <div class="carousel"
+                data-flickity='{ "wrapAround": true }'>
+                    <div class="carousel-cell"><video src="videos/leg_press.mp4" width = "75%" poster="thumbnails/leg_press.jpg" controls></video></div>
+                    <div class="carousel-cell"> <video src="videos/pec_fly.mp4" width = "75%" poster="thumbnails/pec_fly.jpg" controls></video></div>
+                    <div class="carousel-cell"> <video src="videos/leg_press_120.mp4" width = "75%" poster="thumbnails/leg_press.jpg" controls></video></div>
+            </div>
+        </section>
+        <section id="bmi">
+			<h2>BMI Calculator</h2>
+			<p class="text">Height</p>
+			<input type="text" id="h">
+			<p class="text">Weight</p>
+			<input type="text" id="w">
+			<p id="result"></p>
+			<button id="btn" onClick="BMI()">Calculate</button>
+			<p id="info">Please enter height [cm] and weight [kg]</p>
+        </section>
+
+        <section id="founder">
+            <h2><span> Our Founder</span></h2>
+            <img class="profile_image" src="img/mp.jpg" alt="This is Guru Prasad Shukla" >
+            <h3 class="profile_name">Guru Prasad Shukla</h3>
+            <a href="https://www.linkedin.com/in/guru-prasad-shukla-1a2184213/" target="_blank" rel="noopener noreferrer"> <i class="fa-brands fa-linkedin"></i> </a>|&nbsp;&nbsp;
+            <a href="https://www.instagram.com/shukla_guru21/" target="_blank" rel="noopener noreferrer" > Instagram </a>
+            <h4> <b>AIR 52 and 202</b> in JEE Mains(BPlan and BArch) Currently studying at NIT Raipur, IT Stream,2 times NDA-SSB quailified.</h4>
+            <h5>Belonging from a small beautiful city Rajnandgaon, Chhattisgarh and qualifying JEE Mains (Btech,BPlan,BArch) without taking any drop or going to mega-tutions like Allen,Resonance,Akash or Vibrant, I am very graeful to all my teachers and the Youtubers I've followed online specially Aman Dhattarwal, Sachin Rana, Rankers JEE and many more.</h5>
+        </section>
+        <footer>
+            <a href="#"> Contact Us</a>
+            <a href="#"> FAQs</a>
+            <a href="#"> Refund Policy</a>
+            <a href="#"> Privacy Policy</a>
+            <a href="#"> Terms of Use</a>
+            <a href="#"> 2022|Guru Prasad Shukla</a>
+        </footer>
+        <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    </main>
+</body>
+</html>
